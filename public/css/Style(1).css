@@ -1,0 +1,63 @@
+:root {
+    --size: 0;
+}
+.skill {
+    transform: scale(0.5); /*Modifier la taille du cercle
+    /* width: 100px;
+    height: 100px; */
+    position: relative;
+}
+
+.outer {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,O.7)
+}
+
+.inner {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+
+#number{
+    font-size: 65px;
+    color: #555;
+    font-weight: bold;
+}
+
+circle {
+    border-radius: 0%;
+    fill: none;
+    stroke: null;  /* Variable pour la couleur du cercle */  /* rouge : #7a0000 jaune : #edd605 */
+    stroke-linecap: butt;
+    stroke-width: 20px;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;   
+    animation: anim 2s linear forwards;}
+
+svg {
+    transform: rotate(-90deg); /*point de départ du cercle*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes anim{
+        100%{
+             stroke-dashoffset: var(--size) 
+            /* Variable de la longueur du tour   */  /* 50 = Tour complet  */   /* 500 = 0% */ /* 280 = 50% */
+    }
+}
+

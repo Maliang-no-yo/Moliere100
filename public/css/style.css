@@ -1,0 +1,167 @@
+.bloc {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top: 30%;
+    padding: 1%;
+    width: 42%;
+    padding-right: 4%;
+    height: 50%;
+    border: none;
+    outline: none;
+    resize : none;
+    border-radius: 1%;
+}
+
+#bloc-gauche {
+    position: fixed;
+    left: 2%;
+}
+
+#bloc-droit {
+    overflow: scroll;
+    position: fixed;
+    right: 2%;
+    cursor: default;
+}
+
+#bloc-droit button{
+    background-color:#95C59E;
+    cursor:pointer;
+    border: 0px;
+}
+
+#bloc-droit button:hover{
+    background-color:yellowgreen;
+}
+
+#bloc-droit button:focus{
+    background-color:green;   
+}
+
+.explicationError{
+    display:none;
+}
+
+.correction-btn {
+    position: fixed;
+    left: 2%;
+    background-color: #95c59e;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top: 85%;
+    padding: 1%;
+    width: 47%;
+    height: 10%;
+    border: none;
+    border-radius: 1%;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: large;
+}
+
+.correction-btn:hover {
+    transform: scale(1.0);
+    font-size: 130%;
+}
+
+.correction-zone {
+    background-color: #95c59e;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top: 85%;
+    padding: 1%;
+    width: 45%;
+    height: 6%;
+    border: none;
+    resize : none;
+    border-radius: 1%;
+    position: fixed;
+    right: 2%;
+    cursor: default;
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #95c59e;
+}
+
+#note {
+    position: absolute;
+    margin-top: 5%;
+}
+
+#note > img {
+    width: 15%;
+}
+
+#note > img:hover {
+    transform: scale(1.1);
+}
+
+#coms {
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 8%;
+    margin-right: 2%;
+}
+
+#copie {
+    background-color: #95c59e;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    margin-top: 14%;
+    right: 3%;
+    border: none;
+    border-radius: 20%;
+    padding: 0%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#copie:hover {
+    transform: scale(1.05);
+}
+
+#content {
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#content #btn01 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+}
+
+#content .gauche {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+#content #zonetexte {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    height: 40%;
+    width: 45%;
+    transform: translate(-50%, -50%);
+}
+
+#content .btn02 {
+    position: absolute;
+    top: 65%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+}
+
+#content > .btn > button {
+    width: 200px;
+}

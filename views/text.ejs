@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <%- include ( 'templates/common_head' ) %>
+        <link rel="stylesheet" href="css/Style(1).css">
+        <script defer src="js/Grade.js"></script>
+</head>
+
+<body>
+    <%- include ( 'templates/header' ) %>
+        <div id="corps">
+            <!-- <div id="note"> -->
+            <div class="skill" id="note">
+
+                <div class="outer">
+                    <div class="inner">
+                        <div id="number">
+
+                        </div>
+                    </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                    </defs>
+                    <circle id="circle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                </svg>
+
+            </div>
+            <!-- </div> -->
+            <div id="coms">
+                <div id="spellingErrors">Erreurs d'orthographes : </div>
+                <div id="othersErrors">Autres erreurs : </div>
+                <div id="totalErrors">Total d'erreurs : </div>
+            </div>
+            <form action="/text" method="get">
+                <textarea id="bloc-gauche" class="bloc" name="text"><%= text %></textarea>
+                <button id="sous-bloc-gauche" class="correction-btn" type="submit">Recorrection</button>
+            </form>
+            <button id="copie" class="copie" onclick="copyTextClear()"><img src="img/copie-logo.webp"
+                    height="50px"></button>
+            <div id="bloc-droit" class="bloc"></div>
+            <div id="sous-bloc-droit" class="correction-zone" readonly>
+                <% for(var i=0; i<errors.length; i++) {%>
+                    <div class="explicationError">
+                        <div class="descriptionError">
+                            <%= errors[i].description.en %>
+                        </div>
+                        <div class="upgradeError">
+                            <%= errors[i].bad %> ⟼ <%= errors[i].better%>
+                        </div>
+                        <div hidden class="offsetError">
+                            <%= errors[i].offset %>
+                        </div>
+                        <div hidden class="lengthError">
+                            <%= errors[i].length %>
+                        </div>
+                        <div hidden class="typeError">
+                            <%= errors[i].type %>
+                        </div>
+
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+        <textarea hidden id="textClear">
+            <%= text %>
+        </textarea>
+        <script src="js/script.js"></script>
+        <script src="js/gestion_erreurs.js"></script>
+</body>
+
+</html>

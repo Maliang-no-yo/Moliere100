@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include ( 'templates/common_head' ) %>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="img/logo entier.png">
+    </header>
+    <div id="content">
+        <%- include ( 'templates/header' ) %>
+            <div>
+                Molière 100 est un site web permettant de corriger vos textes. Vous pouvez importer un fichier ou écrire
+                à
+                la
+                main, vous obtiendrez une note sur 100 qui comptera vos fautes d'orthographe, de grammaire, de
+                synthaxe...
+                Vous
+                obtiendrez aussi un version corrigée et la description de vos erreurs. Vous êtes libre de copier-coller
+                le
+                résulat.
+            </div>
+            <form action="/load" method="post" id="import" enctype="multipart/form-data">
+                <input type="file" class="gauche" name="text">
+                <button id="btn01" type="submit" form="import" class="droit">Importer</button>
+            </form>
+            <form action="/text" method="get">
+                <textarea id="zonetexte" placeholder="Ecrivez ici..." class="bloc" name="text"></textarea>
+                <button class="btn02" type="submit" id="zonetexte-valider">Valider</button>
+            </form>
+
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
